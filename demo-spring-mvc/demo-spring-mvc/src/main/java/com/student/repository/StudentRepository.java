@@ -17,4 +17,21 @@ public class StudentRepository implements IStudentRepository{
     public List<Student> display() {
         return list;
     }
+
+    @Override
+    public void save(Student student) {
+        list.add(student);
+    }
+
+    @Override
+    public Student edit(int id) {
+        for (Student student: list
+             ) {
+            if(student.getId() == id) {
+                return student;
+            }
+        }
+        return null;
+    }
+
 }

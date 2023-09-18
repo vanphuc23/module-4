@@ -12,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
+
 <table>
     <tr>
         <td>STT</td>
@@ -23,8 +24,10 @@
             <td>${loop.count}</td>
             <td>${student.getId()}</td>
             <td>${student.getName()}</td>
+            <td><a href="/student/edit/${student.getId()}">click</a></td>
         </tr>
     </c:forEach>
 </table>
+<p>${message}</p>
 </body>
 </html>
