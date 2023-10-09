@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div th:insert="~{layout::header}">-->
+
+<!--</div>-->
+<!--<h1>Trang danh sách</h1>-->
+<!--&lt;!&ndash;<p th:if="${mess}" th:text="{mess}"></p>&ndash;&gt;-->
+<!--<a href="/student/create"> Thêm mới</a>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th>STT</th>-->
+<!--        <th>ID</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Gender</th>-->
+<!--        <th>ClassName</th>-->
+<!--        <th>Language</th>-->
+<!--        <th>Detail-RequestParam</th>-->
+<!--        <th>Detail-PathVariable</th>-->
+<!--    </tr>-->
+<!--    <tr th:each="student,status:${studentList}" >-->
+<!--        <td th:text="${status.count}"></td>-->
+<!--        <td th:text="${student.id}"></td>-->
+<!--        <td th:text="${student.name}"></td>-->
+<!--        <td th:switch="${student.gender}">-->
+<!--            <span th:case="1" th:text="Nam"></span>-->
+<!--            <span th:case="0" th:text="Nữ"></span>-->
+<!--            <span th:case="*" th:text="LGBT"></span>-->
+<!--        </td>-->
+<!--        <td th:text="${student.className}"></td>-->
+<!--        <td >-->
+<!--            <span th:each="lang: ${student.languages}" th:text="${lang }"></span>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            <a th:href="@{/student/detail(id=${student.id})}">Detail1</a>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            <a th:href="@{/student/detail/__${student.id}__}">Detail2</a>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<p th:utext="#{test}"></p>-->
+<!--<div th:replace="~{layout::footer}"></div>-->
+<div th:insert="~{layout::header}"></div>
+<div th:if="${mess}">
+    <span th:text="${mess}"></span>
+</div>
+<h1>Trang danh sách</h1>
+<form action="/student" method="get">
+    <input name="searchName">
+    <button>Search</button>
+</form>
+<table>
+    <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>ClassName</th>
+        <th>Language</th>
+        <th>Detail-RequestParam</th>
+        <th>Detail-PathVariable</th>
+    </tr>
+    <tr th:each="student,dem:${studentPage}">
+        <td th:text="${dem.count}"></td>
+        <td th:text="${student.getId()}"></td>
+        <td th:text="${student.getName()}"></td>
+<!--        <td th:switch="${student.getGender()}">-->
+<!--            <span th:case="1" th:text="Nam"></span>-->
+<!--            <span th:case="0" th:text="Nữ"></span>-->
+<!--            <span th:case="*" th:text="LGBT"></span>-->
+<!--        </td>-->
+        <td>
+            <span th:if="${student.getGender() == 1}" th:text="Nam"></span>
+            <span th:if="${student.getGender() == 0}" th:text="Nữ"></span>
+            <span th:if="${student.getGender() == -1}" th:text="LGBT"></span>
+        </td>
+        <td>
+            <span  th:each="class:${student.getClassName()}" th:text="${class}"></span>
+        </td>
+        <td>
+            <a th:href="@{/student/detail(id=${student.getId()})}">Detail1</a>
+        </td>
+        <td>
+            <a th:href="@{/student/detail/__${student.getId()}__}">Detail2</a>
+        </td>
+    </tr>
+</table>
+
+<a th:if="${studentPage.hasPrevious()}" th:href="@{/student(page=${studentPage.number -1},searchName=${searchName})}">Previous</a>
+<span th:text="${studentPage.number+1}"></span>/<span th:text="${studentPage.totalPages}"></span>
+<a th:if="${studentPage.hasNext()}" th:href="@{/student(page=${studentPage.number+1},searchName=${searchName})}">Next</a>
+
+<div th:replace="~{layout::footer}"></div>
+</body>
+</html>

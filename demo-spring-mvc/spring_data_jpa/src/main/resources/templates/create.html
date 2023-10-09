@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div th:insert="~{layout::header}"></div>-->
+<h1>Thêm mới</h1>
+<!--<form th:object="${student}" action="/student/create" method="post">-->
+<!--    Id-->
+<!--    <input  th:field="*{id}"/><br>-->
+<!--    Name-->
+<!--    <input  th:field="*{name}"/><br>-->
+<!--    Gender-->
+<!--    <input type="radio" th:field="*{gender}" th:value="1" th:text="Name"/>-->
+<!--    <input type="radio" th:field="*{gender}" th:value="0" th:text="Nữ"/>-->
+<!--    <input type="radio" th:field="*{gender}" th:value="-1" th:text="LGBT"/><br>-->
+<!--    ClassName-->
+<!--    <select th:field="*{className}">-->
+<!--        <option value="">-&#45;&#45;Chọn Lớp&#45;&#45;&#45;&#45;</option>-->
+<!--        <option th:each="cls:${classList}" th:value="${cls}" th:text="${cls}"></option>-->
+<!--    </select><br>-->
+<!--    <button>Save</button>-->
+<!--</form>-->
+<form th:object="${student}" action="/student/create" method="post">
+    Name:
+    <input type="text" th:field="*{name}"><br>
+    ClassName:
+    <select th:field="*{className}">
+        <option th:each="class:${classList}" th:text="${class}" th:value="${class}"></option>
+    </select><br>
+    Gender:
+    <input type="radio" th:field="*{gender}" th:text="Nam" th:value="1">
+    <input type="radio" th:field="*{gender}" th:text="Nữ" th:value="0">
+    <input type="radio" th:field="*{gender}" th:text="LGBT" th:value="-1"> <br>
+    <button>Save</button>
+</form>
+</body>
+</html>

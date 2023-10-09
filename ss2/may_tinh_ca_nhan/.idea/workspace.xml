@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="209eebfd-9fa9-4892-a468-d9360005aa31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/webapp/WEB-INF/views/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen_doi_tien_te/chuyen_doi_tien_te/src/main/java/com/calculator/controller/CalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen_doi_tien_te/chuyen_doi_tien_te/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/tu_dien_don_gian/src/main/java/com/example/controller/dictionaryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/tu_dien_don_gian/src/main/java/com/example/service/DictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/tu_dien_don_gian/src/main/java/com/example/service/IDictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/tu_dien_don_gian/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gia_vi_voi_sandwich/src/main/java/com/sandwich/controller/sandwichServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gia_vi_voi_sandwich/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gia_vi_voi_sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gia_vi_voi_sandwich/src/main/webapp/WEB-INF/views/listSandwich.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gia_vi_voi_sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/calculator/controller/CalculationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listCalculator.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/controller/StudentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/repository/IStudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/java/com/student/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/demo-spring-mvc/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +48,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2VZTkIOIr5e4x4H0LhSsrbvn76r" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -84,11 +62,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Codegym/Codegym module 4/ss2/may_tinh_ca_nhan/src/main/webapp/WEB-INF",
+    "last_opened_file_path": "D:/Bài giảng codegym/Bài giảng module 4/demo_spring_controller/demo_spring_mvc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "a45e9d2699461874e12ab1577cca5460",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -198,6 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695042750352</updated>
       <workItem from="1695042751389" duration="3613000" />
+      <workItem from="1695207780580" duration="2232000" />
     </task>
     <servers />
   </component>
