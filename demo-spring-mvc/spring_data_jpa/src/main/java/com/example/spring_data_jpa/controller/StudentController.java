@@ -1,8 +1,10 @@
 package com.example.spring_data_jpa.controller;
 
 
+import com.example.spring_data_jpa.dto.StudentDto;
 import com.example.spring_data_jpa.model.Student;
 import com.example.spring_data_jpa.service.IStudentService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,10 +12,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -42,14 +46,21 @@ public class StudentController {
 
     @GetMapping("/create")
     public String showFormCreate(Model model) {
-        model.addAttribute("student", new Student());
+        model.addAttribute("studentDto", new StudentDto());
         model.addAttribute("languages", new String[]{"JS", "Java", "PHP"});
         return "create";
     }
 
     @PostMapping("/create")
-    public String save(@ModelAttribute Student student,
-                       RedirectAttributes redirectAttributes) {
+    public String save(@Valid @ModelAttribute StudentDto studentDto, BindingResult bindingResult,
+                       RedirectAttributes redirectAttributes, Model model) {
+        new StudentDto().validate(studentDto,bindingResult);
+        if(bindingResult.hasErrors()) {
+            model.addAttribute("studentDto",studentDto);
+            return "create";
+        }
+        Student student = new Student();
+        BeanUtils.copyProperties(studentDto,student);
         studentService.add(student);
         redirectAttributes.addFlashAttribute("mess", "Created Success");
         return "redirect:/student";

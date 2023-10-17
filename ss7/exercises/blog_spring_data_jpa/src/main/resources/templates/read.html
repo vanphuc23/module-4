@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/blog}">Quay lại menu</a>
+<fieldset>
+    <legend>BLOG</legend>
+    <table>
+        <tr>
+            <td><p>Category:</p></td>
+            <td th:text="${blog.category.type}"></td>
+        </tr>
+        <tr>
+            <td><p>Tiltle:</p></td>
+            <td th:text="${blog.title}"></td>
+        </tr>
+        <tr>
+            <td><p>Author:</p></td>
+            <td th:text="${blog.author}"></td>
+        </tr>
+        <tr>
+            <td><p>Post:</p></td>
+            <td th:text="${blog.post}"></td>
+        </tr>
+        <tr>
+            <td><p>Date:</p></td>
+            <td th:text="${blog.date}"></td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>

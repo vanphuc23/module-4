@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<body class="container">
+<form th:object="${userDto}" action="/form/create" method="post">
+    <table>
+        <tr>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">FirstName</label>
+                <input th:field="*{firstName}" class="form-control" id="firstName" required>
+                <small style="color: red;" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></small>
+            </div>
+        </tr>
+        <tr>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">LastName</label>
+                <input th:field="*{lastName}" class="form-control" id="lastName" required>
+                <small style="color: red;" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></small>
+            </div>
+        </tr>
+        <tr>
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">PhoneNumber</label>
+                <input type="number" th:field="*{phoneNumber}" class="form-control" id="phoneNumber" required>
+                <small style="color: red;" th:if="${#fields.hasErrors('phoneNumber')}"
+                       th:errors="*{phoneNumber}"></small>
+            </div>
+        </tr>
+        <tr>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input th:field="*{age}" class="form-control" id="age" required>
+                <small style="color: red;" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></small>
+            </div>
+        </tr>
+        <tr>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input th:field="*{email}" class="form-control" id="email" required>
+                <small style="color: red;" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+            </div>
+        </tr>
+        <tr>
+            <button class="btn btn-outline-success">Save</button>
+        </tr>
+    </table>
+</form>
+<div th:if="${mess}" >
+    <input  id="mess" th:value="${mess}" type="hidden">
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    var mess = document.getElementById('mess').value;
+    if (mess == 1) {
+        swal({
+            title: "Good job!",
+            text: "You clicked the button!",
+            icon: "success",
+            button: "Aww yiss!",
+        });
+    }
+</script>
+</html>

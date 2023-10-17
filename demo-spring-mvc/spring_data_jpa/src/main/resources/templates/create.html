@@ -23,9 +23,10 @@
 <!--    </select><br>-->
 <!--    <button>Save</button>-->
 <!--</form>-->
-<form th:object="${student}" action="/student/create" method="post">
+<form th:object="${studentDto}" action="/student/create" method="post">
     Name:
-    <input type="text" th:field="*{name}"><br>
+    <input th:field="*{name}"><br>
+    <small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small><br>
     ClassName:
     <select th:field="*{className}">
         <option th:each="class:${classList}" th:text="${class}" th:value="${class}"></option>
