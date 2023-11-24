@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div style="display: flex">
+    <div id="info">
+        <h3>CREATE</h3>
+        <table>
+            <tr>
+                <td>Producer:</td>
+                <td><input type="text" id="producer"></td>
+            </tr>
+            <tr>
+                <td>Model:</td>
+                <td><input type="text" id="model"></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" id="price"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add" id="click_create"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="infoUpdate" style="margin-left: 20px">
+        <h3>UDATE</h3>
+        <table>
+            <input type="hidden" id="idSmartphone">
+            <tr>
+                <td>Producer:</td>
+                <td><input type="text" id="newProducer"></td>
+            </tr>
+            <tr>
+                <td>Model:</td>
+                <td><input type="text" id="newModel"></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" id="newPrice"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Update" id="click_update"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<h1>Smartphone List</h1>
+<table id="smartphoneList">
+    <thead>
+    <tr>
+        <td>Producer</td>
+        <td>Model</td>
+        <td>Price</td>
+        <td>Delete</td>
+    </tr>
+    </thead>
+    <tbody id="list_smartphone">
+
+    </tbody>
+</table>
+</body>
+<script>
+    $('#infoUpdate').hide();
+    function display() {
+        $.ajax({
+            contentType: "application/json",
+            method: "GET",
+            url: "http://localhost:8080/api/smartphone",
+            success: function (data) {
+                console.log(data);
+                let content = "";
+                for (let i = 0; i < data.length; i++) {
+                    content += `<tr>\n' +
+                            '            <td>${data[i].producer}</td>\n' +
+                            '            <td>${data[i].model}</td>\n' +
+                            '            <td>${data[i].price}</td>\n' +
+                            '            <td><button onclick="infoDelete(${data[i].id})" id="btn_delete">Delete</button></td>\n' +
+                            '            <td><button onclick="infoUpdate(${data[i].id})" id="btn_update">Update</button></td>\n' +
+                            '       </tr>`
+                }
+                $('#list_smartphone').html(content);
+            }
+        })
+    }
+
+    function infoDelete(id) {
+        $.ajax({
+            contentType: "application/json",
+            method: "DELETE",
+            url: `http://localhost:8080/api/smartphone/delete/${id}`,
+            complete: function () {
+                display();
+            }
+        });
+    }
+
+    function infoUpdate(id) {
+        $("#infoUpdate").show();
+        $.ajax({
+            contentType: "application/json",
+            method: "GET",
+            url: `http://localhost:8080/api/smartphone/${id}`,
+            success: function (data) {
+                $('#idSmartphone').val(data.id);
+                $('#newProducer').val(data.producer);
+                $('#newModel').val(data.model);
+                $('#newPrice').val(data.price);
+            }
+        })
+    }
+
+    function Update() {
+        var idSmartphone = $('#idSmartphone').val();
+        var newProducer = $('#newProducer').val();
+        var newModel = $('#newModel').val();
+        var newPrice = $('#newPrice').val();
+        const Smartphone = {
+            id: idSmartphone,
+            producer: newProducer,
+            model: newModel,
+            price: newPrice
+        }
+        $.ajax({
+            contentType: "application/json",
+            method: "PATCH",
+            dataType: "json",
+            data: JSON.stringify(Smartphone),
+            url: "http://localhost:8080/api/smartphone/update",
+            complete: function () {
+                console.log("OK");
+                $('#infoUpdate').hide();
+                display();
+            }
+        })
+    }
+
+    $(document).ready(function () {
+        display();
+        $('#click_create').click(function () {
+            addNewSmartPhone();
+            $('#producer').val("");
+            $('#model').val("");
+            $('#price').val("");
+            $("#infoUpdate").hide();
+        })
+        $('#click_update').click(function () {
+            Update();
+        })
+
+        function addNewSmartPhone() {
+            let producer = $('#producer').val();
+            let model = $('#model').val();
+            let price = $('#price').val();
+            const newSmartphone = {
+                producer: producer,
+                model: model,
+                price: price
+            };
+            $.ajax({
+                contentType: "application/json",
+                method: "POST",
+                dataType: "json",
+                data: JSON.stringify(newSmartphone),
+                url: "http://localhost:8080/api/smartphone/create",
+                complete: function (rep) {
+                    console.log(rep.status)
+                    display();
+                }
+            })
+        }
+    })
+
+</script>
+
+</html>

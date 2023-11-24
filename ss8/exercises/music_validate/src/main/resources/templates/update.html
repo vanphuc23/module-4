@@ -8,34 +8,34 @@
       rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous">
 <body>
-<form th:object="${musicFind}" action="/music/update" method="post">
+<form th:object="${musicDto}" action="/music/update" method="post">
     <table>
-        <input th:field="*{id}" th:value="${musicFind.getId()}" type="hidden">
+        <input th:field="*{id}" th:value="${musicDto.getId()}" type="hidden">
         <tr>
-            <div class="form-group">
-                <label for="musicName">Tên bài hát</label>
-                <input th:field="*{musicName}" th:value="${musicFind.musicName}" class="form-control" id="musicName" placeholder="Nhập tên bài hát">
+            <div class="mb-3">
+                <label for="musicName" class="form-label">Tên bài hát</label>
+                <input th:field="*{musicName}" th:value="${musicDto.musicName}" class="form-control" id="musicName" placeholder="Nhập tên bài hát">
                 <small style="color: red" th:if="${#fields.hasErrors('musicName')}" th:errors="*{musicName}"></small>
             </div>
         </tr>
         <tr>
-            <div class="form-group">
-                <label for="singer">Nghệ sĩ thể hiện</label>
-                <input th:field="*{singer}" th:value="${musicFind.singer}" class="form-control" id="singer" placeholder="Nhập nghệ sĩ thể hiện">
+            <div class="mb-3">
+                <label for="singer" class="form-label">Nghệ sĩ thể hiện</label>
+                <input th:field="*{singer}" th:value="${musicDto.singer}" class="form-control" id="singer" placeholder="Nhập nghệ sĩ thể hiện">
                 <small style="color: red" th:if="${#fields.hasErrors('singer')}" th:errors="*{singer}"></small>
             </div>
         </tr>
         <tr>
-            <div class="form-group">
-                <label for="musicType">Thể loại nhạc</label>
-                <input th:field="*{musicType}" th:value="${musicFind.musicType}" class="form-control" id="musicType" placeholder="Nhập thể loại nhạc">
+            <div class="mb-3">
+                <label for="musicType" class="form-label">Thể loại nhạc</label>
+                <input th:field="*{musicType}" th:value="${musicDto.musicType}" class="form-control" id="musicType" placeholder="Nhập thể loại nhạc">
                 <small style="color: red" th:if="${#fields.hasErrors('musicType')}" th:errors="*{musicType}"></small>
             </div>
         </tr>
         <tr>
-            <div class="form-group">
-                <label for="file">Đường dẫn file bài hát</label>
-                <input th:field="*{file}" th:value="${musicFind.file}" class="form-control" id="file" placeholder="Nhập đường dẫn file bài hát">
+            <div class="mb-3">
+                <label for="file" class="form-label">Đường dẫn file bài hát</label>
+                <input th:field="*{file}" th:value="${musicDto.file}" class="form-control" id="file" placeholder="Nhập đường dẫn file bài hát">
             </div>
         </tr>
         <tr>

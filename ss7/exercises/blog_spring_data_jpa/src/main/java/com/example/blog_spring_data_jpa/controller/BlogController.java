@@ -4,7 +4,6 @@ import com.example.blog_spring_data_jpa.model.Blog;
 import com.example.blog_spring_data_jpa.model.Category;
 import com.example.blog_spring_data_jpa.service.IBlogService;
 import com.example.blog_spring_data_jpa.service.ICategoryService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

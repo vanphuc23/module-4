@@ -2,6 +2,7 @@ package com.example.spring_data_jpa.controller;
 
 
 import com.example.spring_data_jpa.dto.StudentDto;
+import com.example.spring_data_jpa.exception.DuplicateAdminCreate;
 import com.example.spring_data_jpa.model.Student;
 import com.example.spring_data_jpa.service.IStudentService;
 import org.springframework.beans.BeanUtils;
@@ -26,21 +27,15 @@ public class StudentController {
     @Autowired
     private IStudentService studentService;
 
-    @ModelAttribute("classList")
-    public String[] getListStudent() {
-        System.out.println("get list always run");
-        return new String[]{"A02", "A03", "A04"};
-    }
-
     @GetMapping("")
-    public ModelAndView showList(@PageableDefault(page = 0, size = 2,sort = "name",direction = Sort.Direction.ASC) Pageable pageable,
-                                 @RequestParam(defaultValue = "",required = false) String searchName) {
+    public ModelAndView showList(@PageableDefault(page = 0, size = 2, sort = "name", direction = Sort.Direction.ASC) Pageable pageable,
+                                 @RequestParam(defaultValue = "", required = false) String searchName) {
         List<Student> studentList = studentService.findAll();
-        Page<Student> page = studentService.findAll(pageable,searchName);
+        Page<Student> page = studentService.findAll(pageable, searchName);
         ModelAndView modelAndView =
                 new ModelAndView("list", "studentList", studentList);
         modelAndView.addObject("studentPage", page);
-        modelAndView.addObject("searchName",searchName);
+        modelAndView.addObject("searchName", searchName);
         return modelAndView;
     }
 
@@ -48,19 +43,20 @@ public class StudentController {
     public String showFormCreate(Model model) {
         model.addAttribute("studentDto", new StudentDto());
         model.addAttribute("languages", new String[]{"JS", "Java", "PHP"});
+        model.addAttribute("classList", new String[]{"A02", "A03", "A04"});
         return "create";
     }
 
     @PostMapping("/create")
     public String save(@Valid @ModelAttribute StudentDto studentDto, BindingResult bindingResult,
-                       RedirectAttributes redirectAttributes, Model model) {
-        new StudentDto().validate(studentDto,bindingResult);
-        if(bindingResult.hasErrors()) {
-            model.addAttribute("studentDto",studentDto);
+                       RedirectAttributes redirectAttributes, Model model) throws DuplicateAdminCreate {
+        new StudentDto().validate(studentDto, bindingResult);
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("studentDto", studentDto);
             return "create";
         }
         Student student = new Student();
-        BeanUtils.copyProperties(studentDto,student);
+        BeanUtils.copyProperties(studentDto, student);
         studentService.add(student);
         redirectAttributes.addFlashAttribute("mess", "Created Success");
         return "redirect:/student";
@@ -82,5 +78,8 @@ public class StudentController {
         model.addAttribute("student", student);
         return "detail";
     }
-
+    @ExceptionHandler(DuplicateAdminCreate.class)
+    public String ExceptionAdmin() {
+        return "error_admin";
+    }
 }

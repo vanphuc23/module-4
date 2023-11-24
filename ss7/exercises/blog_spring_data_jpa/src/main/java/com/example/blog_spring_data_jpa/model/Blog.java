@@ -2,6 +2,7 @@ package com.example.blog_spring_data_jpa.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
 

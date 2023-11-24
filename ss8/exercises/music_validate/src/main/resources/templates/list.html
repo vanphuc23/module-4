@@ -35,13 +35,18 @@
         <td th:text="${music.getSinger()}"></td>
         <td th:text="${music.getMusicType()}"></td>
         <td><a th:href="${music.getFile()}" target="_blank">Link</a></td>
+<!--        <td>-->
+<!--            <form th:action="@{/music/update/__${music.getId()}__}" method="post">-->
+<!--                <button>update</button>-->
+<!--            </form>-->
+<!--        </td>-->
         <td><a th:href="@{/music/update/__${music.getId()}__}">update</a></td>
         <td><a th:href="@{/music/delete(id=${music.getId()})}">delete</a></td>
     </tr>
 </table>
 <audio controls>
     <source src="D:\Codegym\Codegym module 4\ss8\exercises\music_validate\src\main\resources\templates\media\cply.mp3"
-            type="audio/mpeg">
+            type="audio/mp3">
 </audio>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

@@ -1,5 +1,6 @@
 package com.example.spring_data_jpa.service;
 
+import com.example.spring_data_jpa.exception.DuplicateAdminCreate;
 import com.example.spring_data_jpa.repository.IStudentRepository;
 import com.example.spring_data_jpa.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,10 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public void add(Student student) {
+    public void add(Student student) throws DuplicateAdminCreate {
+        if(student.getName().equals("Admin")) {
+            throw new DuplicateAdminCreate("Không được đặt tên Admin");
+        }
         studentRepository.save(student);
     }
 

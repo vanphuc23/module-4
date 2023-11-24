@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 0 10px;
+    }
+</style>
+<body>
+
+<nav class="navbar navbar-light" style="background-color: #03a9f4">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+        </a>
+    </div>
+</nav>
+
+<header class="p-2 border-bottom">
+    <div>
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="margin-left: 50px">
+                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Employee</a></li>
+                <li><a th:href="@{/customers}" class="nav-link px-2 link-dark">Customer</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Service</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Contract</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="/customers" method="get">
+                <input type="search" th:value="${searchName}" name="searchName" class="form-control" placeholder="Search..." aria-label="Search">
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-success me-2">Search</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+    <sidebar class="col-2 border-end">
+        <ul style="list-style: none;padding: 0">
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+        </ul>
+    </sidebar>
+    <content class="col-10">
+        <h3>Danh sách khách hàng</h3>
+        <a th:href="@{/customers/create}">+Thêm mới</a>
+        <p th:if="${mess}" th:text="${mess}"></p>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>CMND</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>Address</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="customer,count:${customers}">
+                <td th:text="${count.count}"></td>
+                <td th:text="${customer.customerName}"></td>
+                <td th:text="${#temporals.format(customer.birthday, 'dd/MM/yyyy')}" ></td>
+                <td th:switch="${customer.gender}">
+                    <span th:case="1" th:text="Nam"></span>
+                    <span th:case="0" th:text="Nữ"></span>
+                    <span th:case="*" th:text="LGBT"></span>
+                </td>
+                <td th:text="${customer.cmnd}"></td>
+                <td th:text="${customer.phone}"></td>
+                <td th:text="${customer.email}"></td>
+                <td th:text="${customer.customerType.getCustomerTypeName()}"></td>
+                <td th:text="${customer.address}"></td>
+                <td><a th:href="@{/customers/edit/__${customer.customerId}__}">Edit</a></td>
+                <td>
+                    <button th:attr="onclick=|deleteCustomer('${customer.getCustomerName()}','${customer.getCustomerId()}')|" type="button"
+                            class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <a th:if="${customers.hasPrevious()}" th:href="@{/customers(page=${customers.number-1},searchName=${searchName})}">Previous</a>
+        <span th:text="${customers.number+1}"></span>/ <span th:text="${customers.totalPages}"></span>
+        <a th:if="${customers.hasNext()}" th:href="@{/customers(page=${customers.number+1},searchName=${searchName})}">Next</a>
+    </content>
+</div>
+<footer class="border">
+    <p style="text-align: center;margin: 0 auto;padding: 10px 0">
+        Footer...
+    </p>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/customers/delete" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="customerId" name="customerId">
+                    <p>Bạn có muốn xóa người tên <span style="color: red" id="customerName" name="customerName"></span>
+                        không?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<script>
+    function deleteCustomer(customerName,customerId) {
+        document.getElementById("customerName").innerText = customerName;
+        document.getElementById("customerId").value = customerId;
+    }
+</script>
+</html>

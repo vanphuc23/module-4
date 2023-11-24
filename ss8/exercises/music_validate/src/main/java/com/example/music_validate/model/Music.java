@@ -1,9 +1,6 @@
 package com.example.music_validate.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Music {
@@ -12,18 +9,12 @@ public class Music {
     private Integer id;
     private String musicName;
     private String singer;
-    private String musicType;
+    @ManyToOne
+    @JoinColumn(name = "id",referencedColumnName = "id")
+    private MusicType musicType;
     private String file;
 
     public Music() {
-    }
-
-    public Music(Integer id, String musicName, String singer, String musicType, String file) {
-        this.id = id;
-        this.musicName = musicName;
-        this.singer = singer;
-        this.musicType = musicType;
-        this.file = file;
     }
 
     public Integer getId() {
@@ -50,19 +41,19 @@ public class Music {
         this.singer = singer;
     }
 
-    public String getMusicType() {
-        return musicType;
-    }
-
-    public void setMusicType(String musicType) {
-        this.musicType = musicType;
-    }
-
     public String getFile() {
         return file;
     }
 
     public void setFile(String file) {
         this.file = file;
+    }
+
+    public MusicType getMusicType() {
+        return musicType;
+    }
+
+    public void setMusicType(MusicType musicType) {
+        this.musicType = musicType;
     }
 }

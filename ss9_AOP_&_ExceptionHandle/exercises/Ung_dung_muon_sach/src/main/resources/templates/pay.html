@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${peopleDto}" action="/books/pay" method="post">
+    <input type="text" th:field="*{peopleId}" required>
+    <small style="color: red" th:if="${#fields.hasErrors('peopleId')}" th:errors="*{peopleId}"></small>
+    <small style="color: red" th:if="${errors}" th:text="${errors}"></small>
+    <button>Trả sách</button>
+</form>
+</body>
+</html>

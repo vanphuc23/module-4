@@ -5,8 +5,171 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="209eebfd-9fa9-4892-a468-d9360005aa31" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/controller/ContractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/controller/FacilityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/controller/RestControllerFacility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/contract/AttachFacility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/contract/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/contract/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/customer/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/employee/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/employee/EducationDegree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/employee/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/facility/Facility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/facility/FacilityType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/model/facility/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/repository/contract/IContractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/repository/customer/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/repository/customer/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/repository/facility/IFacilityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/repository/facility/IFacilityTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/repository/facility/IRentTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/contract/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/contract/IContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/customer/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/customer/ICustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/facility/FacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/facility/FacilityTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/facility/IFacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/facility/IFacilityTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/facility/IRentTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/java/com/example/casestudy/service/facility/RentTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/contract/contractList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/contract/createContract.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/customer/createCustomer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/customer/editCustomer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/customer/listCustomer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/facilityList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/house/createHouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/house/editHouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/room/createRoom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/room/editRoom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/villa/createVilla.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/facility/villa/editVilla.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CaseStudy/casestudy/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../New folder/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../New folder/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/aop/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/exception/DuplicateAdminCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/resources/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/resources/templates/error_admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/controller/RestControllerStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/dto/StudentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/model/ClassRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/repository/IClassRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/repository/IStudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/service/ClassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/service/IClassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/service/IStudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo_webservice/src/main/java/com/example/demo_webservice/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/cardCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/dto/CartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/java/com/product/gio_hang/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/resources/templates/cart/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/resources/templates/product/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss10_Session_&amp;_Cookie/exercise/gio_hang/src/main/resources/templates/product/productList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_Web_Service/exercises/Tich_hop_RESTful_cho_ung_dung_Blog/src/main/java/com/example/tich_hop_restful_cho_ung_dung_blog/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/java/com/example/dien_thoai/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/java/com/example/dien_thoai/controller/SmartphoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/java/com/example/dien_thoai/model/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/java/com/example/dien_thoai/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/java/com/example/dien_thoai/service/ISmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/java/com/example/dien_thoai/service/SmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_&amp;_Ajax/exercises/dien_thoai/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/model/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/model/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/model/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/repository/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/repository/UserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/java/com/example/spring_security_example/util/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/logoutSuccessfulPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/userInfoPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss14_Spring_Security/practices/spring_security_example/src/main/resources/templates/welcomePage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/aop/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/dto/PeopleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/exception/NoBookInLIbrary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/exception/PersonIdNotExist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/model/People.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/model/TypeOfBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/repository/IBookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/repository/IPeopleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/service/IBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/service/IPeopleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/java/com/example/ung_dung_muon_sach/service/PeopleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/resources/templates/error_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/resources/templates/error_borrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/resources/templates/listBook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/Ung_dung_muon_sach/src/main/resources/templates/pay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/aop/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/controller/PictureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/data/Exception.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/exception/DuplicateBadWordsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/model/Picture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/repository/IPictureRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/service/IPictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/service/PictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/java/com/example/picture_of_day_aop/util/WriteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/resources/templates/error_bad_word.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP_&amp;_ExceptionHandle/exercises/picture_of_day_aop/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo-spring-mvc/spring_data_jpa/src/main/java/com/example/spring_data_jpa/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/BlogSpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/BlogSpringDataJpaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/repository/ICategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/repository/ICategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/ICategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/java/com/example/blog_spring_data_jpa/service/ICategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/test/java/com/example/blog_spring_data_jpa/BlogSpringDataJpaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/blog_spring_data_jpa/src/test/java/com/example/blog_spring_data_jpa/BlogSpringDataJpaApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/exercises/picture_of_day_spirng_data_jpa/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/exercises/picture_of_day_spirng_data_jpa/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/java/com/example/music_validate/controller/MusicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/java/com/example/music_validate/controller/MusicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/java/com/example/music_validate/repository/IMusicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/java/com/example/music_validate/repository/IMusicRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/resources/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss8/exercises/music_validate/src/main/resources/templates/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +225,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Bài giảng codegym/Bài giảng module 4/demo_spring_controller/demo_spring_mvc",
+    "last_opened_file_path": "D:/Codegym/Codegym module 4/ss3/exercise/quan_ly_san_pham",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -178,6 +341,7 @@
       <updated>1695042750352</updated>
       <workItem from="1695042751389" duration="3613000" />
       <workItem from="1695207780580" duration="2232000" />
+      <workItem from="1700337836356" duration="73000" />
     </task>
     <servers />
   </component>
