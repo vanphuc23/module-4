@@ -69,10 +69,4 @@ public class QuestionController {
         redirectAttributes.addFlashAttribute("mess", "Xóa thành công");
         return "redirect:/questions";
     }
-    @GetMapping("{id}")
-    public String search(@PathVariable Long id,Model model) {
-        QuestionContent questionContent = iQuestionService.findById(id);
-        model.addAttribute("question",questionContent);
-        return "list";
-    }
 }

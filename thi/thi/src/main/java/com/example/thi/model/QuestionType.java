@@ -1,5 +1,7 @@
 package com.example.thi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,6 +12,7 @@ public class QuestionType {
     private Long idQuestionType;
     private String questionName;
     @OneToMany(mappedBy = "questionType",cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<QuestionContent> questionContent;
 
     public QuestionType() {
